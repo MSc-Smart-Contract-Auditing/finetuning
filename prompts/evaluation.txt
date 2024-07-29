@@ -20,4 +20,4 @@ Professional audit:
 Student audit:
 {}
 <|start_header_id|>assistant<|end_header_id|>
-Criterion analysis:
+Reasoning:
