@@ -6,6 +6,9 @@ Your task is to determine wether this criterion is satisfied or not.
 First analyze wether the criterion is met or not, without outputing a final verdict.
 Only once you have output your reasoning, provide a final verdict by outputing FAIL or PASS - nothing else is allowed.
 In cases where the crietrion is partially met you should determine wether FAIL or PASS would be a more accurate verdict in the specific case.
+Stick to this formatting:
+Reasoning: ...
+Verdict: PASS/FAIL
 
 <|start_header_id|>user<|end_header_id|>
 Criterion:
