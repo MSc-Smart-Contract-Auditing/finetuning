@@ -1,0 +1,1 @@
+Fulfilled if the two audits describe the same attacking strategy, even if the students' strategy lacks the same level of detail as yours. Here the actual vulnerability is not important - if the strategy is the same this criterion is fulfilled.
