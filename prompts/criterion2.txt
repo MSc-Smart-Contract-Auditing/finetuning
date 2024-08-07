@@ -1,1 +1,1 @@
-Fulfilled if the student describes the same functionality or the same part of the code as the professional auditor. This is about the location of the vulnerability rather than its nature.
+Fulfilled if both audits describe a vulnerability contained in the same functionality or the same part of the code. This is about the location of the vulnerability rather than its nature.
