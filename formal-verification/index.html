@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Model Outputs</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.css" rel="stylesheet" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 20px;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+            }
+
+            .title {
+                justify-content: center;
+                padding: 0;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                /* margin-bottom: 20px; */
+            }
+
+            .box {
+                width: 750px;
+                height: 500px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: #fafafa;
+                overflow-y: scroll;
+                white-space: pre-wrap;
+                /* To make text wrap */
+                word-wrap: break-word;
+                /* To break long words */
+            }
+
+            .criteria-container {
+                margin-top: 20px;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .criteria-container label {
+                margin-right: 1cm;
+            }
+
+            .criteria-container input {
+                color: white;
+                margin-right: 1cm;
+                border-radius: 4px;
+            }
+
+            .fail {
+                background-color: rgb(245, 61, 61);
+                color: white;
+                padding: 0.2cm 0.3cm;
+            }
+
+            .fail:hover {
+                background-color: rgb(150, 4, 4);
+            }
+
+            .pass {
+                background-color: rgb(32, 194, 32);
+                color: white;
+                padding: 0.2cm 0.2cm;
+            }
+
+            .pass:hover {
+                background-color: rgb(22, 155, 22);
+                color: white;
+                padding: 0.2cm 0.2cm;
+            }
+
+            button[type="submit"] {
+                padding: 10px 15px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            button[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container title">
+            <h3>ID: {{ record_id }}</h3>
+        </div>
+        <div class="container">
+            <div>
+                <label for="output">Output</label>
+                <div class="box" innerHTML="output">{{ output }}</div>
+            </div>
+            <div>
+                <label for="real">Real</label>
+                <div class="box">{{ real }}</div>
+            </div>
+        </div>
+        <form action="/submit" method="post">
+            <input type="hidden" name="record_id" value="{{ record_id }}">
+            <div class="criteria-container">
+                <table>
+                    <tr class="criterion">
+                        <td>
+                            <label for="cr1">Same <strong>type</strong> of vulnerability</label>
+                        </td>
+                        <td>
+                            <input type="hidden" id="cr1" name="cr1" value="{{ criteria[0] }}">
+                            <input type="button" value="{{ criteria[0] }}" class="fail"
+                                   onclick="toggleButton(this, 'cr1')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cr2">Same <strong>location</strong>/<strong>functionality</strong></label>
+                        </td>
+                        <td>
+                            <input type="hidden" id="cr2" name="cr2" value="{{ criteria[1] }}">
+                            <input type="button" value="{{ criteria[1] }}" class="fail"
+                                   onclick="toggleButton(this, 'cr2')">
+                        </td>
+                        <td>
+                            <button type="submit">Record</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cr3">Same <strong>attacking strategy</strong></label>
+                        </td>
+                        <td>
+                            <input type="hidden" id="cr3" name="cr3" value="{{ criteria[2] }}">
+                            <input type="button" value="{{ criteria[2] }}" class="fail"
+                                   onclick="toggleButton(this, 'cr3')">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <script>
+            function toggleButton(button, hiddenInputId) {
+                const hiddenInput = document.getElementById(hiddenInputId);
+                if (button.value === "FAIL") {
+                    button.value = "PASS";
+                    button.classList.remove("fail");
+                    button.classList.add("pass");
+                    hiddenInput.value = "PASS";
+                } else {
+                    button.value = "FAIL";
+                    button.classList.remove("pass");
+                    button.classList.add("fail");
+                    hiddenInput.value = "FAIL";
+                }
+            }
+        </script>
+    </body>
+
+</html>
