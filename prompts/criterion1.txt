@@ -1,1 +1,0 @@
-Fulfilled if the two audits describe the same vulnerability. This is about the nature of vulnerability, rather than the specifics in the code.

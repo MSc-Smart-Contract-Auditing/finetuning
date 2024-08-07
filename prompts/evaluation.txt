@@ -1,23 +1,7 @@
-<|begin_of_text|><|start_header_id|>system<|end_header_id|>
-You are given 2 smart-contract audits written by a professional auditor and a student.
-You are assigned a single criterion as a part of a larger audit.
-Your task is to determine wether this criterion is satisfied or not.
+Consider the 2 audits below.
+Output a 3-digit binary number where each digit corresponds to its respective criterion.
+You should not output anything else apart from this binary number - this is to save $ for output tokens.
 
-First analyze wether the criterion is met or not, without outputing a final verdict.
-Only once you have output your reasoning, provide a final verdict by outputing FAIL or PASS - nothing else is allowed.
-In cases where the crietrion is partially met you should determine wether FAIL or PASS would be a more accurate verdict in the specific case.
-Stick to this formatting:
-Reasoning: ...
-Verdict: PASS/FAIL
-
-<|start_header_id|>user<|end_header_id|>
-Criterion:
-{}
-
-Professional audit:
-{}
-
-Student audit:
-{}
-<|start_header_id|>assistant<|end_header_id|>
-Reasoning:
+Criterion 1: Fulfilled if the two audits describe the same vulnerability of the same nature.
+Criterion 2: Fulfilled if the audits describe the same part of the code, regardless of everything else.
+Criterion 3: Fulfilled if the two audits describe the same attacking strategy.
