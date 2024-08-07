@@ -6,7 +6,7 @@ Below is text comprehension task. Output a score based on the specification belo
 Below are two audits for a piece of solidity code.
 You are a security auditor and your task is to mark an audit written by a student based on 3 critera.
 
-First briefly reason about whether each criterion is met or not.
+First output short reasoning about whether each criterion is met or not.
 If criteria are not fully satisifed, determine which is the more appropriate label from "PASS" or "FAIL" (nothing else is allowed).
 Only after you have explained the reasoning behind each criterion, output a list labeling each criterion with either "PASS" or "FAIL".
 
