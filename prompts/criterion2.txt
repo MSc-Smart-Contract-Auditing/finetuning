@@ -1,1 +1,0 @@
-Fulfilled if both audits describe a vulnerability contained in the same part of the code. Even if the nature of the vulnerability is different, if the location is the same this criterion is fullfilled.

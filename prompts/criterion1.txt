@@ -1,1 +1,0 @@
-Fulfilled if the two audits describe the same vulnerability in the same exact place in the code. The attacking strategy here is not important as long as the vulnerability matches.

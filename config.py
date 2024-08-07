@@ -1,6 +1,6 @@
 import json
 
-with open("config.json") as f:
+with open("credentials.json") as f:
     config = json.load(f)
 
 
