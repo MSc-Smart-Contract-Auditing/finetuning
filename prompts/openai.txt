@@ -1,0 +1,7 @@
+Consider the 2 audits below.
+Output a 3-digit binary number where each digit corresponds to its respective criterion.
+You should not output anything else apart from this binary number - this is to save $ for output tokens.
+
+Criterion 1: Fulfilled if the two audits describe the same vulnerability of the same nature.
+Criterion 2: Fulfilled if the audits describe the same part of the code, regardless of everything else.
+Criterion 3: Fulfilled if the two audits describe the same attacking strategy.
