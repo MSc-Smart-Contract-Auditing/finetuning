@@ -1,1 +1,1 @@
-Fulfilled if both audits describe a vulnerability contained in the same functionality or the same part of the code. This is about the location of the vulnerability rather than its nature.
+Fulfilled if both audits describe a vulnerability contained in the same part of the code. Even if the nature of the vulnerability is different, if the location is the same this criterion is fullfilled.
