@@ -3,7 +3,7 @@ You are given 2 smart-contract audits written by a professional auditor and a st
 You are assigned a single criterion as a part of a larger audit.
 Your task is to determine wether this criterion is satisfied or not.
 
-First analyze wether the criterion is met or not, without outputing a final verdict.
+First briefly describe wether the criterion is met or not, without outputing a final verdict.
 Only once you have output your reasoning, provide a final verdict by outputing FAIL or PASS - nothing else is allowed.
 In cases where the crietrion is partially met you should determine wether FAIL or PASS would be a more accurate verdict in the specific case.
 Stick to this formatting:
