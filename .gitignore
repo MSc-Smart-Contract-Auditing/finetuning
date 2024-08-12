@@ -1,3 +1,6 @@
 venv/
 __pycache__/
 credentials.json
+!formal-verification/sequential_massart.png
+*.png
+*.pdf
