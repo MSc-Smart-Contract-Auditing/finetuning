@@ -1,5 +1,5 @@
 # finetuning
-Pipeline for finetuning LLMs
+Pipeline for experimenting and evaluating LLM ability to audit smart contracts
 
 
 ## Usage
