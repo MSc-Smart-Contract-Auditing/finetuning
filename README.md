@@ -17,10 +17,23 @@ This repo contains a Web application which goes through model outputs and allows
 
 The accuracy of the evaluating model is then approximated using a Sequential Massart algorithm (See: `formal-verification/sequential_massart_smc.ipynb`
 
-To ensure good estimate of the model accuracy at least a 100 rows need to be evaluated.
-
 ### Runnnig the web app
 
 1. Run `make install`
 
 2. Run `make run` to start the app
+
+### Results
+In total `213` rows were verified where each row contains `3` criteria or `639` samples.
+
+Below is the resulting accuracy of `gpt-4o-mini` for evaluating audits.
+
+<img src="https://github.com/MSc-Smart-Contract-Audition/finetuning/blob/main/formal-verification/sequential_massart.png">
+
+```bash
+633: Interval: [0.9223155036427156, 0.9780027129062199] - Samples: 634.0 - Estimate: 0.9557661927330173
+```
+
+The model achieves an evaluation accuracy of $(95.6\pm 5)$\% with $97.6$\% confidence.
+
+To be more exact the accuracy lays between $92.2$\% and $97.8$\% with $97.6$\% confidence. This means that the probability that the estimate is outside of this range is just $2.4$\%.
