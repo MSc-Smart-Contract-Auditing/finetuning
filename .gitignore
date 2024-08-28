@@ -4,3 +4,4 @@ credentials.json
 !formal-verification/sequential_massart.png
 *.png
 *.pdf
+.DS_Store
