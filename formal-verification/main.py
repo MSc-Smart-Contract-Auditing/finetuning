@@ -8,7 +8,7 @@ app = FastAPI()
 
 templates = Jinja2Templates(directory=".")
 
-MODEL_PATH = "llama3-8b"
+MODEL_PATH = "llama3-8b-4bit"
 OUTPUT_FILE = f"../runs/{MODEL_PATH}/descriptions.csv"
 RECORD_FILE = f"{MODEL_PATH}-verified.csv"
 
